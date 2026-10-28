@@ -1,0 +1,83 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parent {
+    width: 400px;
+    height: 600px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    background-color: teal;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10px;
+    transition: all 0.5s ease-in;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: wheat;
+    width: 100%;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 100%;
+    width: 45%;
+    height: 30%;
+    margin-top: 20%;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input {
+    width: 80%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    width: 60%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+#close {
+    display: none;
+}
+
+
+body:has(#close:checked) .parent {
+    transform: translateY(1000px);
+}
+
+.fa-house{
+    display: none;
+}
+
+body:has(#close:checked) .fa-house{
+    display: block;
+}
